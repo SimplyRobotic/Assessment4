@@ -8,3 +8,5 @@ Changelog
 22/07/21 - Added Camera Following Player and Camera Bounds.
 25/07/21 - Collectible issues - conflict with the PlayerController script's method for handling collisions. Trying to find a workaround.
 29/07/21 - Changed Character Controller to both fix collision issues and add animation state machines.
+4/08/21 - Animation state machines couldn't be added. 
+4/08/21 - Changed Character Controller to a more simple one, which works perfectly. This also fixed all collision issues. Added death and respawn mechanic, but this made it so the camera doesn't follow the player anymore. This issue is being worked on.
