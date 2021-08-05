@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
-  private void OnCollisionEnter2D(Collision2D collision)
+  
+
+    [SerializeField] Transform Respawn; // respawn point 
+    public GameObject Player; // player 
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Hazard"))
         {
-            Destroy(gameObject);
-            LevelManager.instance.Respawn();
+            Player.transform.position = Respawn.position;
         }
     }
 }
