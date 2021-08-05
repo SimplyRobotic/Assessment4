@@ -10,3 +10,4 @@ Changelog
 29/07/21 - Changed Character Controller to both fix collision issues and add animation state machines.
 4/08/21 - Animation state machines couldn't be added. 
 4/08/21 - Changed Character Controller to a more simple one, which works perfectly. This also fixed all collision issues. Added death and respawn mechanic, but this made it so the camera doesn't follow the player anymore. This issue is being worked on.
+5/08/21 - Changed the respawning mechanic from Destroy+Instantiate to teleport. This fixed the camera issue.
