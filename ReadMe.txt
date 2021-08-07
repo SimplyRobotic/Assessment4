@@ -12,3 +12,4 @@ Changelog
 4/08/21 - Changed Character Controller to a more simple one, which works perfectly. This also fixed all collision issues. Added death and respawn mechanic, but this made it so the camera doesn't follow the player anymore. This issue is being worked on.
 5/08/21 - Changed the respawning mechanic from Destroy+Instantiate to teleport. This fixed the camera issue.
 8/08/21 - Added Death for the player when out of lives. The game can now be lost.
+8/08/21 - Added restart button. The game can now be restarted by the player.
