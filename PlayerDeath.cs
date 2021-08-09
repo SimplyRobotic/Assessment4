@@ -10,6 +10,16 @@ public class PlayerDeath : MonoBehaviour
     public GameObject Player; // player 
     public int startLives = 5; // starting lives
 
+    [SerializeField] Transform Win;
+    GameController gc;
+
+    void Start()
+    {
+        // Finds GameController and gives access to the GameController Variables
+        gc = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+       
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Hazard"))
@@ -25,6 +35,14 @@ public class PlayerDeath : MonoBehaviour
         }
     }
 
-
-
+    void Update()
+    {
+        if (gc.collectible == 0)
+        {
+            Player.transform.position = Win.position;
+            gc.collectible--;
+        }
+                     
+    }
+   
 }

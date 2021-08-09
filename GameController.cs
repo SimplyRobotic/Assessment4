@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    
     public int collectible = 0;
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,5 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 }
