@@ -11,12 +11,12 @@ public class PlayerDeath : MonoBehaviour
     public int startLives = 5; // starting lives
 
     [SerializeField] Transform Win;
-    GameController gc;
+
+   
 
     void Start()
     {
-        // Finds GameController and gives access to the GameController Variables
-        gc = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+       
        
     }
 
@@ -33,16 +33,17 @@ public class PlayerDeath : MonoBehaviour
         {
             Destroy(Player);
         }
-    }
 
+
+    }
     void Update()
     {
-        if (gc.collectible == 0)
+        if (ScoringSystem.score == 10)
         {
             Player.transform.position = Win.position;
-            gc.collectible--;
+            ScoringSystem.score++;
         }
-                     
     }
+  
    
 }

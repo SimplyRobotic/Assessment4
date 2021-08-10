@@ -8,20 +8,12 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
 
     public float jumpForce = 20f;
+
+    float mx;
     public Transform feet;
     public LayerMask groundLayers;
 
-    float mx;
-    bool isGrounded;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-  // simple movement left/right
-    void Update()
+    private void Update()
     {
         mx = Input.GetAxisRaw("Horizontal");
 
@@ -30,33 +22,30 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
     }
-    
-    void FixedUpdate()
+
+    private void FixedUpdate()
     {
         Vector2 movement = new Vector2(mx * movementSpeed, rb.velocity.y);
 
         rb.velocity = movement;
     }
-    // jump function
+
     void Jump()
     {
         Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
 
         rb.velocity = movement;
     }
-    //checks grounded to limit jumps to one
-   public bool IsGrounded()
+
+    public bool IsGrounded()
     {
         Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.5f, groundLayers);
 
-        if(groundCheck.gameObject != null)
+        if (groundCheck != null)
         {
             return true;
+        }
 
-        }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 }
