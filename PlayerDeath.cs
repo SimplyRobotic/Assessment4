@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerDeath : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerDeath : MonoBehaviour
     [SerializeField] Transform Respawn; // respawn point 
     public GameObject Player; // player 
     public int startLives = 5; // starting lives
+    public Text livesText;
+
 
     [SerializeField] Transform Win;
 
@@ -24,8 +27,9 @@ public class PlayerDeath : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Hazard"))
         {
+            startLives--;
             Player.transform.position = Respawn.position;
-            startLives = startLives - 1;
+            
         }
 
         // Kills player if out of lives
@@ -43,6 +47,8 @@ public class PlayerDeath : MonoBehaviour
             Player.transform.position = Win.position;
             ScoringSystem.score++;
         }
+
+        livesText.GetComponent<Text>().text = "Lives: " + startLives;
     }
   
    
