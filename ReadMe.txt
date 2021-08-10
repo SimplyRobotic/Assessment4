@@ -13,3 +13,5 @@ Changelog
 5/08/21 - Changed the respawning mechanic from Destroy+Instantiate to teleport. This fixed the camera issue.
 8/08/21 - Added Death for the player when out of lives. The game can now be lost.
 8/08/21 - Added restart button. The game can now be restarted by the player.
+10/08/21 - Added score UI. Started Building level.
+11/08/21 - Added Lives UI. Cannot work out infinite jump issue with player controller.
