@@ -1,6 +1,6 @@
 https://github.com/SimplyRobotic/Assessment4
 
-Use arrow keys to move. Collect all 8 collectibles within the allowed time to win, and avoid hazards such as spikes and pits. 
+Use arrow keys to move. Collect all 8 collectibles to win, and avoid hazards such as spikes and pits. 
 
 Changelog
 22/07/21 - Started project. Built character controller using a tutorial. Started coding collectables and level layout.
