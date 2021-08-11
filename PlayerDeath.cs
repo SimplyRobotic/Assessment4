@@ -11,6 +11,7 @@ public class PlayerDeath : MonoBehaviour
     public GameObject Player; // player 
     public int startLives = 5; // starting lives
     public Text livesText;
+    public Text winText;
 
 
     [SerializeField] Transform Win;
@@ -46,6 +47,7 @@ public class PlayerDeath : MonoBehaviour
         {
             Player.transform.position = Win.position;
             ScoringSystem.score++;
+            winText.GetComponent<Text>().text = "You Win!";
         }
 
         livesText.GetComponent<Text>().text = "Lives: " + startLives;
