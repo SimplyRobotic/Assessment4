@@ -5,7 +5,7 @@ using UnityEngine;
 public class CollectCoin : MonoBehaviour
 {
     public GameObject Collectible;
-
+// Checks for collision and destroys collectable, then add 1 to the score
     void OnTriggerEnter2D(Collider2D other)
     {
 
