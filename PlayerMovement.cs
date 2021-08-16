@@ -10,13 +10,16 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce = 20f;
 
     float mx;
-    public Transform feet;
+    // for checking grounded
+    public Transform feet; 
     public LayerMask groundLayers;
 
-    private void Update()
-    {
-        mx = Input.GetAxisRaw("Horizontal");
 
+
+    private void Update()
+    { // general horizontal movement
+        mx = Input.GetAxisRaw("Horizontal");
+// checking for jump
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             Jump();
@@ -31,14 +34,14 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void Jump()
-    {
+    { // custom jump function
         Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
 
         rb.velocity = movement;
     }
 
     public bool IsGrounded()
-    {
+    { // checks if player is on the ground to limit jumps to 1
         Collider2D groundCheck = Physics2D.OverlapCircle(feet.position, 0.5f, groundLayers);
 
         if (groundCheck != null)
