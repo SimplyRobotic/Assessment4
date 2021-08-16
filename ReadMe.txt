@@ -16,3 +16,4 @@ Changelog
 10/08/21 - Added score UI. Started Building level.
 11/08/21 - Added Lives UI. Cannot work out infinite jump issue with player controller.
 12/08/21 - Fixed infinite jump with character controller. Added win text.
+12/08/21 - Game Built and ready.
