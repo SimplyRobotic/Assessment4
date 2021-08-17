@@ -1,6 +1,6 @@
 https://github.com/SimplyRobotic/Assessment4
 
-Use arrow keys to move. Collect all 10 collectibles to win, and avoid hazards such as spikes and pits. 
+Use arrow keys to move and Space to jump. Collect all 15 coins to win, and avoid hazards such as spikes and pits. 
 
 Changelog
 22/07/21 - Started project. Built character controller using a tutorial. Started coding collectables and level layout.
@@ -16,4 +16,5 @@ Changelog
 10/08/21 - Added score UI. Started Building level.
 11/08/21 - Added Lives UI. Cannot work out infinite jump issue with player controller.
 12/08/21 - Fixed infinite jump with character controller. Added win text.
-12/08/21 - Game Built and ready.
+17/08/21 - Added sounds effects for jumping and collecting coins. Added an extra section to the game, and changed the number of coins from 10 to 15.
+18/08/21 - Game Built and ready.
