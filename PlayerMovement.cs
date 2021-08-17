@@ -13,16 +13,19 @@ public class PlayerMovement : MonoBehaviour
     // for checking grounded
     public Transform feet; 
     public LayerMask groundLayers;
+    
+    public AudionSource JumpSound; // Jump sound effect
 
 
 
     private void Update()
     { // general horizontal movement
         mx = Input.GetAxisRaw("Horizontal");
-// checking for jump
+// checking for jump input and playing jump sound
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             Jump();
+            JumpSound.Play();
         }
     }
 
